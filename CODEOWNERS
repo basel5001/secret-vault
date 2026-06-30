@@ -1,0 +1,14 @@
+# Default owners for the entire repo
+* @platform-team
+
+# Terraform modules
+/terraform/ @platform-team @security-team
+
+# Vault policies
+/policies/ @security-team
+
+# Scripts
+/scripts/ @platform-team
+
+# CI/CD
+/.github/ @platform-team

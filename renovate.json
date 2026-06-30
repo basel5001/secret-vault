@@ -1,0 +1,24 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "terraform": {
+    "enabled": true
+  },
+  "docker-compose": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["terraform"],
+      "groupName": "terraform providers",
+      "automerge": false
+    },
+    {
+      "matchManagers": ["docker-compose"],
+      "groupName": "docker images",
+      "automerge": false
+    }
+  ],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5
+}
