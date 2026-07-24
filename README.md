@@ -164,6 +164,20 @@ secret-vault/
     └── security.yml               # Gitleaks secret scanning
 ```
 
+## SOPS Integration
+
+For GitOps-friendly encrypted secrets (secrets-in-git), see the [`sops/`](sops/) directory. SOPS allows you to commit encrypted secrets directly to Git using age or AWS KMS encryption, complementing Vault's dynamic secret capabilities.
+
+```bash
+# Encrypt a secrets file
+./sops/scripts/encrypt.sh my-secrets.yaml
+
+# Decrypt
+./sops/scripts/decrypt.sh sops/examples/secrets.enc.yaml
+```
+
+See [`sops/README.md`](sops/README.md) for full documentation.
+
 ## License
 
 [MIT](LICENSE)
