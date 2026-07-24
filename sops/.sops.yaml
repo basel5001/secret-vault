@@ -1,0 +1,12 @@
+creation_rules:
+  # Encrypt all files under sops/examples/ with age key
+  - path_regex: sops/examples/.*\.yaml$
+    age: >-
+      age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p
+    # Optionally use AWS KMS (uncomment below):
+    # kms: arn:aws:kms:us-east-1:123456789012:key/your-key-id
+
+  # Encrypt all files under configs/secrets/
+  - path_regex: configs/secrets/.*\.yaml$
+    age: >-
+      age1ql3z7hjy54pw3hyww5ayyfg7zqgvc7w3j2elw8zmrj2kg5sfn9aqmcac8p
